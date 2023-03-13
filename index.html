@@ -2,11 +2,28 @@
 <html>
 
 <head>
-    <title>Hello World Web Page</title>
+    <title>Change Text on Button Click</title>
+    <style>
+        #text {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Hello World!</h1>
+    <h1>Change Text on Button Click</h1>
+    <p id="text">This is the original text.</p>
+    <button id="button">Click me!</button>
+    <script>
+        const button = document.querySelector("#button");
+        const text = document.querySelector("#text");
+        button.addEventListener("click", function () {
+            text.textContent = "This is the new text!";
+        });
+
+
+    </script>
 </body>
 
 </html>
